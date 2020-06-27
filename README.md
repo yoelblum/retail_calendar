@@ -1,12 +1,15 @@
 # RetailCalendar
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/retail_calendar`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
-Add this line to your application's Gemfile:
+This gem implements 4-4-5 / 4-5-4 / 5-4-4 retail calendar in a very lightweight manner.
+https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar
+
+While several similar gems that do this exist, I couldn't find one that supports all forms 445, 454, 544 and that doesn't have serious issues and stale pull requests.
+
+Credit due to Brian K https://stackoverflow.com/questions/23531481/is-there-a-way-in-ruby-to-find-the-beginning-of-the-year-in-a-4-5-4-retail-cal
 
 ```ruby
 gem 'retail_calendar'
@@ -22,8 +25,16 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
-
+    calendar = RetailCalendar::Calendar.new(type: 445)
+    
+    puts calendar.start_of_year(2020) # 2020-02-02
+    puts calendar.start_of_year_by_date(Date.today) # 2020-02-02
+    puts calendar.end_of_year(2020) # 2021-01-30
+    puts calendar.start_of_month(2020, 1) # 2020-03-01
+    puts calendar.end_of_month(2020, 1) # 2020-03-28
+    puts calendar.weeks_in_year(2020) # 52
+    puts calendar.retail_week_to_date(2, 2020) # {:start_week=>Sun, 09 Feb 2020, :end_week=>Sat, 15 Feb 2020}
+    
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
