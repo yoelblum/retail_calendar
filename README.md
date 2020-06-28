@@ -32,8 +32,8 @@ Or install it yourself as:
     puts calendar.start_of_year(2020) # 2020-02-02
     puts calendar.start_of_year_by_date(Date.today) # 2020-02-02
     puts calendar.end_of_year(2020) # 2021-01-30
-    puts calendar.start_of_month(2020, 1) # 2020-03-01
-    puts calendar.end_of_month(2020, 1) # 2020-03-28
+    puts calendar.start_of_month(2020, 1) # 2020-02-02
+    puts calendar.end_of_month(2020, 1) # 2020-02-29
     puts calendar.weeks_in_year(2020) # 52
     puts calendar.retail_week_to_date(2, 2020) # {:start_week=>Sun, 09 Feb 2020, :end_week=>Sat, 15 Feb 2020}
     
