@@ -7,11 +7,11 @@
 This gem implements 4-4-5 / 4-5-4 / 5-4-4 retail calendar in a very lightweight manner.
 https://en.wikipedia.org/wiki/4%E2%80%934%E2%80%935_calendar
 
-While several similar gems that do this exist (most notably the gem retail_calendar), I couldn't find one that supports all forms 445, 454, 544 and that doesn't have serious issues and stale pull requests.
+While several similar gems that do this exist (most notably the gem retail_calendar, not to be confused with this gem: retail_calendars), I couldn't find one that supports all forms 445, 454, 544 and that doesn't have serious issues and stale pull requests.
 
 Credit due to Brian K https://stackoverflow.com/questions/23531481/is-there-a-way-in-ruby-to-find-the-beginning-of-the-year-in-a-4-5-4-retail-cal
 
-IMPORTANT: when installing, make sure you type the gem's name 'retail_calendars' and not retail_calendar
+IMPORTANT: when installing, make sure you type the gem's name '**retail_calendars**' and not retail_calendar
 
 ```ruby
 gem 'retail_calendars'
