@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    retail_calendar (0.1.0)
+    retail_calendars (0.1.0)
       activesupport (>= 3, < 7)
 
 GEM
@@ -43,7 +43,7 @@ PLATFORMS
 DEPENDENCIES
   bundler (~> 2.0)
   rake (~> 10.0)
-  retail_calendar!
+  retail_calendars!
   rspec (~> 3.0)
 
 BUNDLED WITH
