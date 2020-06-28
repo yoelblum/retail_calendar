@@ -2,7 +2,7 @@ PATH
   remote: .
   specs:
     retail_calendar (0.1.0)
-      activesupport
+      activesupport (>= 3, < 7)
 
 GEM
   remote: https://rubygems.org/

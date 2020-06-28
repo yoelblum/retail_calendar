@@ -72,5 +72,16 @@ RSpec.describe RetailCalendar::Calendar do
       expect(instance.weeks_in_year(2020)).to be_eql(52)
       expect(instance.weeks_in_year(2021)).to be_eql(52)
     end
+    it "does magic" do
+      calendar = RetailCalendar::Calendar.new(type: 445)
+
+      puts calendar.start_of_year(2020)
+      puts calendar.start_of_year_by_date(Date.today)
+      puts calendar.end_of_year(2020)
+      puts calendar.start_of_month(2020, 2)
+      puts calendar.end_of_month(2020, 2)
+      puts calendar.weeks_in_year(2020)
+      puts calendar.retail_week_to_date(2, 2020)
+    end
   end
 end

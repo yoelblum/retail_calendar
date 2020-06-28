@@ -4,14 +4,14 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require "retail_calendar/version"
 
 Gem::Specification.new do |spec|
-  spec.name          = "retail_calendar"
+  spec.name          = "retail_calendars"
   spec.version       = RetailCalendar::VERSION
   spec.authors       = ["Joel Blum"]
   spec.email         = ["yoelblumenator@gmail.com"]
   spec.required_ruby_version = '~> 2.0'
   spec.summary       = %q{Implements retail calendar}
   spec.description   = %q{Supports 445, 454 and 544 calendars}
-  spec.homepage      = "http://todo.com"
+  spec.homepage      = "https://github.com/yoelblum/retail_calendar"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -19,7 +19,7 @@ Gem::Specification.new do |spec|
   if spec.respond_to?(:metadata)
 
     spec.metadata["homepage_uri"] = spec.homepage
-    spec.metadata["source_code_uri"] = "http://todo.com"
+    spec.metadata["source_code_uri"] = "https://github.com/yoelblum/retail_calendar"
     spec.metadata["changelog_uri"] = "http://todo.com"
   else
     raise "RubyGems 2.0 or newer is required to protect against " \
@@ -38,5 +38,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency "bundler", "~> 2.0"
   spec.add_development_dependency "rake", "~> 10.0"
   spec.add_development_dependency "rspec", "~> 3.0"
-  spec.add_dependency "activesupport"
+  spec.add_dependency "activesupport", ">=3", "<7"
 end
