@@ -51,32 +51,32 @@ module RetailCalendar
       end
     end
 
-# Return the number of weeks in a particular year
+    # Return the number of weeks in a particular year
     def weeks_in_year(year)
       ((start_of_year(year + 1) - start_of_year(year)) / 7).to_i
     end
 
-# What week it is within the retail year from 1-53
-# @return [Integer] The week number of the year, from 1-53
+    # What week it is within the retail year from 1-53
+    # @return [Integer] The week number of the year, from 1-53
     def year_week(date)
       (((date - start_of_year_by_date(date)) + 1) / 7.0).ceil
     end
 
-# what month it is within the retail year for a given date
+    # what month it is within the retail year for a given date
     def year_month(date)
       month = date.month
       RetailCalendar.julian_to_merch(month)
     end
 
-# accetps retail week (1..53) and returns the week's date
+    # accetps retail week (1..53) and returns the week's date
     def retail_week_to_date(retail_week, year)
       start_week =  start_of_year(year) + (retail_week - 1).weeks
       { start_week: start_week, end_week: start_week + 6.days }
     end
 
-# Converts a retail month to the correct julian month
-# @param merch_month [Integer] the merch month to convert
-# @return [Integer] the julian month
+    # Converts a retail month to the correct julian month
+    # @param merch_month [Integer] the merch month to convert
+    # @return [Integer] the julian month
     def self.merch_to_julian(merch_month)
       raise ArgumentError if merch_month > 12 || merch_month <= 0
 
@@ -87,9 +87,9 @@ module RetailCalendar
       end
     end
 
-# Converts a julian month to a retail month
-# @param julian_month [Integer] the julian month to convert
-# @return [Integer] the merch month
+    # Converts a julian month to a retail month
+    # @param julian_month [Integer] the julian month to convert
+    # @return [Integer] the merch month
     def self.julian_to_merch(julian_month)
       raise ArgumentError if julian_month > 12 || julian_month <= 0
 
