@@ -34,7 +34,7 @@ module RetailCalendar
     end
 
     # Return starting date for a particular month
-    # param: month is the merch month of the year
+    # param: month is the retail month of the year
     def start_of_month(year, month)
       start = start_of_year(year) + ((month - 1) / 3).to_i * 91
       case @type * 10 + (month - 1) % 3
@@ -67,7 +67,7 @@ module RetailCalendar
     # what month it is within the retail year for a given date
     def year_month(date)
       month = date.month
-      RetailCalendar.julian_to_merch(month)
+      RetailCalendar.julian_to_retail(month)
     end
 
     # accetps retail week (1..53) and returns the week's date
@@ -77,23 +77,23 @@ module RetailCalendar
     end
 
     # Converts a retail month to the correct julian month
-    # @param merch_month [Integer] the merch month to convert
+    # @param retail_month [Integer] the retail month to convert
     # @return [Integer] the julian month
-    def self.merch_to_julian(merch_month)
-      raise ArgumentError if merch_month > 12 || merch_month <= 0
+    def self.retail_to_julian(retail_month)
+      raise ArgumentError if retail_month > 12 || retail_month <= 0
 
-      if merch_month == 12
+      if retail_month == 12
         1
       else
-        merch_month + 1
+        retail_month + 1
       end
     end
 
-    # Converts a julian month to a merch month
+    # Converts a julian month to a retail month
     #
     # @param julian_month [Integer] the julian month to convert
-    # @return [Integer] the merch month
-    def self.julian_to_merch(julian_month)
+    # @return [Integer] the retail month
+    def self.julian_to_retail(julian_month)
       raise ArgumentError if julian_month > 12 || julian_month <= 0
 
       if julian_month == 1

@@ -46,7 +46,7 @@ RSpec.describe RetailCalendar::Calendar do
   end
 
   describe '::start_of_month' do
-    it 'returns the start of merch month' do
+    it 'returns the start of retail month' do
       expect(instance.start_of_month(2020, 1).to_s).to be_eql('2020-02-02')
       expect(instance.start_of_month(2020, 2).to_s).to be_eql('2020-03-01')
       expect(instance.start_of_month(2020, 3).to_s).to be_eql('2020-03-29')
