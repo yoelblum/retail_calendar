@@ -1,8 +1,9 @@
 env:
   RUBY_VERSION: 2.6
-
+name: Rails tests
+on: [push,pull_request]
 jobs:
-  rubocop-test:
+  rubocop:
     name: Rubocop
     runs-on: ubuntu-18.04
     steps:
