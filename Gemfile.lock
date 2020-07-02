@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    retail_calendars (0.1.0)
+    retail_calendars (0.1.1)
       activesupport (>= 3, < 7)
 
 GEM
@@ -13,12 +13,19 @@ GEM
       minitest (~> 5.1)
       tzinfo (~> 1.1)
       zeitwerk (~> 2.2, >= 2.2.2)
+    ast (2.4.1)
     concurrent-ruby (1.1.6)
     diff-lcs (1.4.2)
     i18n (1.8.3)
       concurrent-ruby (~> 1.0)
     minitest (5.14.1)
+    parallel (1.19.2)
+    parser (2.7.1.4)
+      ast (~> 2.4.1)
+    rainbow (3.0.0)
     rake (10.5.0)
+    regexp_parser (1.7.1)
+    rexml (3.2.4)
     rspec (3.9.0)
       rspec-core (~> 3.9.0)
       rspec-expectations (~> 3.9.0)
@@ -32,10 +39,23 @@ GEM
       diff-lcs (>= 1.2.0, < 2.0)
       rspec-support (~> 3.9.0)
     rspec-support (3.9.3)
+    rubocop (0.86.0)
+      parallel (~> 1.10)
+      parser (>= 2.7.0.1)
+      rainbow (>= 2.2.2, < 4.0)
+      regexp_parser (>= 1.7)
+      rexml
+      rubocop-ast (>= 0.0.3, < 1.0)
+      ruby-progressbar (~> 1.7)
+      unicode-display_width (>= 1.4.0, < 2.0)
+    rubocop-ast (0.1.0)
+      parser (>= 2.7.0.1)
+    ruby-progressbar (1.10.1)
     thread_safe (0.3.6)
     tzinfo (1.2.7)
       thread_safe (~> 0.1)
-    zeitwerk (2.3.0)
+    unicode-display_width (1.7.0)
+    zeitwerk (2.3.1)
 
 PLATFORMS
   ruby
@@ -45,6 +65,7 @@ DEPENDENCIES
   rake (~> 10.0)
   retail_calendars!
   rspec (~> 3.0)
+  rubocop (~> 0.86.0)
 
 BUNDLED WITH
    2.0.1
