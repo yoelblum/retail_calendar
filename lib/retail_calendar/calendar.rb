@@ -8,7 +8,7 @@ module RetailCalendar
       @yr_end_mo = year_end_month
     end
 
-# Return the ending date for a particular year
+    # Return the ending date for a particular year
     def end_of_year(year)
       year += 1 unless @yr_end_mo == 12
       year_end = Date.new year, @yr_end_mo, -1
@@ -20,19 +20,19 @@ module RetailCalendar
       year_end
     end
 
-# Return starting of retail date for a particular year
+    # Return starting of retail date for a particular year
     def start_of_year(year)
       end_of_year(year - 1) + 1
     end
 
-# Returns the start of the retail_year for the given date
+    # Returns the start of the retail_year for the given date
     def start_of_year_by_date(date)
       date -= 1.year if date < start_of_year(date.year)
       start_of_year(date.year)
     end
 
-# Return starting date for a particular month
-# param: month is the merch month of the year
+    # Return starting date for a particular month
+    # @param: month[Integer] the retail month of the year
     def start_of_month(year, month)
       start = start_of_year(year) + ((month - 1) / 3).to_i * 91
       case @type * 10 + (month - 1) % 3
@@ -44,7 +44,7 @@ module RetailCalendar
       start
     end
 
-# Return the ending date for a particular month
+    # Return the ending date for a particular month
     def end_of_month(year, month)
       if month == 12 then end_of_year year
       else start_of_month(year, month + 1) - 1
@@ -87,8 +87,7 @@ module RetailCalendar
       end
     end
 
-# Converts a julian month to a merch month
-#
+# Converts a julian month to a retail month
 # @param julian_month [Integer] the julian month to convert
 # @return [Integer] the merch month
     def self.julian_to_merch(julian_month)
