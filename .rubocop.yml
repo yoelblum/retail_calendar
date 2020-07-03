@@ -1,3 +1,5 @@
 AllCops:
   Exclude:
     - spec/*.rb
+Style/Documentation:
+  Enabled: false
