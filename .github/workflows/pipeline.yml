@@ -5,16 +5,16 @@ on: [push,pull_request]
 jobs:
   bundler:
     name: Bundler
-      runs-on: ubuntu-18.04
-      steps:
-        - uses: actions/checkout@v1
-        - uses: actions/setup-ruby@v1
-          with:
-            ruby-version: ${{ env.RUBY_VERSION }}
-        - name: Update gems
-          run: gem update --system
-        - name: Install bundler
-          run: gem install bundle
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v1
+      - uses: actions/setup-ruby@v1
+        with:
+          ruby-version: ${{ env.RUBY_VERSION }}
+      - name: Update gems
+        run: gem update --system
+      - name: Install bundler
+        run: gem install bundle
   rubocop:
     name: Rubocop
     runs-on: ubuntu-18.04
