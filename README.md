@@ -11,6 +11,8 @@ While several similar gems that do this exist (most notably the gem retail_calen
 
 Credit due to Brian K https://stackoverflow.com/questions/23531481/is-there-a-way-in-ruby-to-find-the-beginning-of-the-year-in-a-4-5-4-retail-cal
 
+The calendar starts on Sunday and ends on Saturday.
+
 IMPORTANT: when installing, make sure you type the gem's name '**retail_calendars**' and not retail_calendar
 
 ```ruby
@@ -36,6 +38,9 @@ Or install it yourself as:
     puts calendar.end_of_month(2020, 1) # 2020-02-29
     puts calendar.weeks_in_year(2020) # 52
     puts calendar.retail_week_to_date(2, 2020) # {:start_week=>Sun, 09 Feb 2020, :end_week=>Sat, 15 Feb 2020}
+    
+## TODOS
+Support different year start day and month.
     
 ## Development
 
